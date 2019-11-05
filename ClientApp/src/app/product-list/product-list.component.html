@@ -1,0 +1,21 @@
+<div>
+  <div *ngIf="isLoaded">
+    <h1>Text to show if data has not finished loading</h1>
+  </div>
+
+  <div *ngIf="!products">products not available</div>
+
+  <div *ngIf="products">
+    <p>Products are available</p>
+    <div *ngFor="let product of products">
+      <p>{{ product.id }}</p>
+      <p>{{product.name}}</p>
+      <p>{{product.description}}</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
